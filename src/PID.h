@@ -1,5 +1,8 @@
 #ifndef PID_H
 #define PID_H
+#include <vector>
+
+
 
 class PID {
  public:
@@ -35,16 +38,19 @@ class PID {
   /**
    * PID Errors
    */
-  double p_error;
-  double i_error;
-  double d_error;
+  double p_err;
+  double i_err;
+  double d_err;
+  double prev_cte;
 
   /**
    * PID Coefficients
-   */ 
+   */
   double Kp;
   double Ki;
   double Kd;
+
+
 };
 
 #endif  // PID_H

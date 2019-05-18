@@ -3,10 +3,26 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Implementation
+
+* The most vital part of the PID control strategy is the Proportional (P) component which steers the car close to the center line. When we initialize the Kp coefficient to 1, the car drifts from the center and drives off to the side of the road.
+
+* Next, we introduce the Integral (I) component element of our control loop by initializing the Ki coefficient to 1. This accounts for the potential error bias experienced by the controller.
+
+* The Differential (D) component was responsible for resolving the drift and the errors experienced by the controller
+
+
+## Reflection
+
+* Due to time constraints, we chose the final hyperparameters (P, I, D coefficients) through manual tuning as that allowed our car navigate even more than one lap without drifting off the road or riding erratically. If we had more time at our disposal, we would have considered more detailed analysis to select the most optimum parameter implementing twiddle, SGD algorithm or MPC, LQR control strategy.
+
+* Sample video of our car driving through one lap of on the track can be found [here:](https://youtu.be/N1Y0oKFZV6g) 
+
+
 ## Dependencies
 
 * cmake >= 3.5
- * All OSes: [click here for installation instructions](https://cmake.org/install/)
+* All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1(mac, linux), 3.81(Windows)
   * Linux: make is installed by default on most Linux distros
   * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
@@ -19,7 +35,7 @@ Self-Driving Car Engineer Nanodegree Program
   * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
   * If you install from source, checkout to commit `e94b6e1`, i.e.
     ```
-    git clone https://github.com/uWebSockets/uWebSockets 
+    git clone https://github.com/uWebSockets/uWebSockets
     cd uWebSockets
     git checkout e94b6e1
     ```
@@ -33,7 +49,7 @@ Fellow students have put together a guide to Windows set-up for the project [her
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+4. Run it: `./pid`.
 
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
 
@@ -95,4 +111,3 @@ still be compilable with cmake and make./
 
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
