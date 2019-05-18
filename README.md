@@ -16,7 +16,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 * Due to time constraints, we chose the final hyperparameters (P, I, D coefficients) through manual tuning as that allowed our car navigate even more than one lap without drifting off the road or riding erratically. If we had more time at our disposal, we would have considered more detailed analysis to select the most optimum parameter implementing twiddle, SGD algorithm or MPC, LQR control strategy.
 
-* Sample video of our car driving through one lap of on the track can be found [here:](https://youtu.be/N1Y0oKFZV6g) 
+* Sample video of our car driving through one lap of on the track can be found [here.](https://youtu.be/N1Y0oKFZV6g) 
 
 
 ## Dependencies
